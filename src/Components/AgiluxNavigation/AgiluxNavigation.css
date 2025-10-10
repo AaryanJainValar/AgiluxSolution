@@ -1,0 +1,219 @@
+.AgiluxLogoAnimated {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 3rem;
+}
+
+.AgiluxLogoAnimated h4::first-letter {
+    background-color: white;
+    color: black;
+    padding: 5px 13px;
+    border-radius: 50%;
+    font-weight: 500;
+}
+
+.AgiluxLogoAnimated h4 {
+    /* letter-spacing: 3px; */
+    font-size: 25px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin: 0px;
+}
+
+.ant-drawer-content {
+    background: rgb(0 0 0 / 78%) !important;
+    backdrop-filter: blur(20px) !important;
+    color: white;
+
+}
+
+.AgiluxNavigation {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.5rem 0rem;
+    transition: all 1s ease-in-out;
+    /* Smooth transition for opacity, background, and transform */
+    background-color: transparent;
+    transform: translateY(0);
+    /* Initial position (absolute) */
+    opacity: 1;
+}
+
+.AgiluxNavigation.scrolled {
+    /* position: sticky; */
+    top: 19px;
+    width: 100%;
+    padding: 1rem 0rem;
+    transform: translateY(-20px);
+    /* Smooth transition upwards */
+    background-color: rgba(0, 0, 0, 0.865);
+    /* Sticky background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    transition: 1s;
+    opacity: 1;
+}
+
+.ExploreTabs {
+    cursor: pointer;
+}
+
+.ExploreTabs svg {
+    font-size: 25px;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 8px;
+    transition: .5s;
+}
+.ExploreTabs svg:hover {
+    font-size: 25px;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 8px;
+    background-color: white;
+    color: black;
+    transition: .5s;
+}
+
+
+.NavigationChildLinks p {
+    margin: 10px 0px;
+    cursor: pointer;
+    transition: .5s;
+    color: white;
+}
+
+.NavigationChildLinks p hr {
+    border: 0.5px solid white;
+    opacity: 1;
+    width: 5%;
+    margin: 0px;
+    transition: .5s;
+}
+
+.NavigationChildLinks p:hover hr {
+    border: 0.5px solid white;
+    opacity: 1;
+    width: 20%;
+    margin: 0px;
+    transition: .5s;
+}
+
+.NavigationChildLinks p span {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.316);
+    padding: 5px 0px;
+}
+
+.ant-drawer-body button {
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 50%;
+    color: white;
+    padding: 7px 11px;
+    cursor: pointer;
+    position: absolute;
+    right: 53px;
+    top: 37px;
+
+}
+
+.DrawerTitle h3 {
+    font-weight: 500;
+    margin: 0px;
+}
+
+.DrawerTitle h3::first-letter {
+    background-color: white;
+    color: black;
+    padding: 5px 12px;
+    border-radius: 50%;
+}
+
+
+
+.NavigationChildLinks p {
+    transition: .5s;
+}
+
+.ChildDrawerContent p {
+    margin: 20px 0px;
+    transform: translatex(0px);
+    transition: .5s;
+}
+
+.ChildDrawerContent p:hover {
+    margin: 20px 0px;
+    transform: translatex(10px);
+    transition: .5s;
+    cursor: pointer;
+    color: white;
+}
+
+
+.ChildDrawerContent {
+    margin-top: 5rem;
+    height: 100%;
+}
+
+.ProjectsLinks p {
+    margin: 10px 0px;
+}
+
+.AgiluxLogoContainer img {
+    width: 100px;
+}
+
+.RelatedContainer{
+    position: relative;
+    height: 450px;
+}
+.AbsoluteContainerBottom{
+    position: absolute;
+    bottom: 0px;
+    /* height: 100%; */
+    width: 100%;
+}
+.AbsoluteContainerBottom .DesignCards{
+    border: 0.2px solid rgba(255, 255, 255, 0.22);
+    margin: 10px;
+    min-height: 100px;
+}
+.video-card{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+@media (max-width:768px) {
+    .RelatedContainer{
+        position: relative;
+        height: 350px;
+    }
+    .AbsoluteContainerBottom .ant-row .ant-col{
+        width: 33.33%;
+    }
+    .ant-drawer-body button {
+        background-color: transparent;
+        border: 1px solid white;
+        border-radius: 50%;
+        color: white;
+        padding: 7px 11px;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 34px;
+    }
+
+    .AgiluxLogoContainer img {
+        width: 70px;
+    }
+
+    .AgiluxLogoAnimated {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0rem 1rem;
+    }
+}

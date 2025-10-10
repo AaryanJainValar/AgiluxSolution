@@ -1,0 +1,27 @@
+.VideosContainer .ant-row .ant-col div {
+    padding: 20px;
+}
+
+.VideosContainer .ant-row .ant-col div video {
+    border-radius: 20px;
+}
+
+.VideosContainer {
+    padding: 0rem 8rem;
+}
+
+@media (min-width:1000px) and (max-width:4000px) {
+    .AbsoluteVideo {
+        position: absolute;
+    }
+}
+
+@media (max-width:769px) {
+    .VideosContainer {
+        padding: 0rem 0rem;
+    }
+
+    .AbsoluteVideo {
+        position: static;
+    }
+}

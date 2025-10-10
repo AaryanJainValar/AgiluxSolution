@@ -1,0 +1,118 @@
+.Footer {
+    border: 1px solid black;
+    height: 30vh;
+    background-color: black;
+}
+
+.TopBarFooter {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+
+}
+
+.FooterContainer {
+    padding: 0rem 8rem;
+}
+
+.EmailAnimation {
+    width: 195px;
+    border-bottom: 1px solid rgb(81, 81, 81);
+    position: relative;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+
+.EmailAnimation hr {
+    margin: 0px;
+    position: absolute;
+    bottom: 0px;
+    width: 30px;
+    transition: .5s;
+
+}
+
+.EmailAnimation:hover hr {
+    margin: 0px;
+    position: absolute;
+    bottom: 0px;
+    width: 195px;
+    transition: .5s;
+}
+
+.EmailAnimation h4 {
+    margin: 0px;
+}
+
+.EmailContainer {
+    width: 70%;
+}
+
+.EmailContainer h2 {
+    font-weight: 400;
+}
+
+.TopBarFooter {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.SocialLinks ul {
+    display: flex;
+    list-style: none;
+}
+
+.SocialLinks ul li {
+    position: relative; /* Needed for the pseudo-element positioning */
+    margin: 0px 10px;
+    display: flex;
+    align-items: center;
+    padding: 5px 0px;
+    border-bottom: 1px solid rgb(81, 81, 81);
+    cursor: pointer;
+}
+
+.SocialLinks ul li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 20%;
+    height: 1px; /* You can adjust this height based on how thick you want the border */
+    background-color: white; /* Border color */
+    transition: width 0.4s ease-in-out; /* Smooth transition */
+}
+
+.SocialLinks ul li:hover::after {
+    width: 100%; /* Expands to full width on hover */
+}
+
+
+@media (max-width:769px){
+    .FooterContainer {
+        padding: 0rem 1rem;
+    }
+    .EmailContainer {
+        width: 100%;
+    }
+    .TopBarFooter {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .TopBarFooter>div{
+        width: 100%;
+    }
+    .SocialLinks ul {
+        display: flex;
+        list-style: none;
+        padding: 0px;
+    }
+    .SocialLinks ul li:first-child{
+        margin-left: 0px;
+    }
+    
+}

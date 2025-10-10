@@ -1,0 +1,79 @@
+.AgiluxProcessContainer {
+height: 500px;
+    position: sticky;
+    right: 0px;
+    left: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    /* top: 0px; */
+}
+
+.anothercontainer {
+    padding: 0rem 8rem;
+    left: 0px;
+    right: 0px;
+}
+
+.AgiluxProcessContainer h2 {
+    font-size: 60px;
+    font-weight: 100;
+    /* margin: 10px 0px; */
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.BackOverlayImage img {
+    width: 100%;
+}
+
+.BackOverlayImage {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.BackOverlayImage .BlackOverlay {
+    background-color: black;
+    opacity: 0.8;
+    position: absolute;
+    height: 120%;
+    width: 100%;
+    top: 0px;
+}
+
+.AgiluxProcessContainer .mySwiper {
+    width: 100%;
+}
+
+.SwiperContentContainer h3 {
+    font-size: 30px;
+}
+
+.SwiperContentContainer {
+    width: 70%;
+}
+#PCOnly{
+    display: block;
+}
+#MobileOnly{
+    display: none;
+}
+@media (max-width:769px) {
+    #PCOnly{
+        display: none;
+    }
+    
+    .anothercontainer {
+        width: 100%;
+        padding: 0rem 1rem;
+    }
+
+    .SwiperContentContainer {
+        width: 100%;
+    }
+    #MobileOnly{
+        display: block;
+    }
+}
