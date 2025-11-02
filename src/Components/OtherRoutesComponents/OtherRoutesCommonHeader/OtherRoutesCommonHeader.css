@@ -1,0 +1,43 @@
+.OtherRoutesCommonHeaderContainer {
+    position: relative;
+    height: 500px;
+}
+
+.OtherRoutesCommonHeaderContainer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.689);
+    z-index: 5;
+}
+
+.OtherRoutesCommonHeaderImage {
+    height: 100%;
+    overflow: hidden;
+}
+
+.OtherRoutesCommonHeaderImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.OtherRoutesCommonHeaderImageOverlayContent {
+    height: 100%;
+    /* width: 100%; */
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .OtherRoutesCommonHeaderContainer {
+        height: 400px;
+    }
+}

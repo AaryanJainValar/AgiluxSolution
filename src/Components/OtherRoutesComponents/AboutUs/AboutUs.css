@@ -1,0 +1,23 @@
+.AboutUsContentImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.AboutUsContentImage {
+    min-height: 400px;
+    height: 100%;
+}
+
+.AboutUsContentImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.AlignCenter {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}

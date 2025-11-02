@@ -1,0 +1,109 @@
+/* HomeTop2Services Layered Animation Classes - Left to Right Sequence, Bottom to Top Animation */
+.services-layer-1 {
+    filter: blur(8px);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease-out;
+    transition-delay: 0s; /* First to appear (left) */
+}
+
+.services-layer-1.animate {
+    filter: blur(0);
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.services-layer-2 {
+    filter: blur(6px);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease-out;
+    transition-delay: 0.2s; /* Middle */
+}
+
+.services-layer-2.animate {
+    filter: blur(0);
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.services-layer-3 {
+    filter: blur(8px);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease-out;
+    transition-delay: 0.4s; /* Last to appear (right) */
+}
+
+.services-layer-3.animate {
+    filter: blur(0);
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.HomeTop2ServicesContainer .ant-row .ant-col:nth-child(1) .FirstServiceItem {
+    background-color: rgb(248, 248, 248);
+    /* padding: 20px; */
+    /* border-radius: 10px; */
+
+}
+
+.HomeTop2ServicesContainer .ant-row .ant-col:nth-child(1) .FirstServiceItem div {
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px; */
+    padding: 20px;
+    position: relative;
+}
+.HomeTop2ServicesContainer .ant-row .ant-col:nth-child(2) .SecondServiceItem div {
+    background-color: rgb(248, 248, 248);
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px; */
+    padding: 20px;
+    position: relative;
+}
+
+.HomeTop2ServicesContainer .ant-row .ant-col:nth-child(1) .FirstServiceItem div::before,
+.HomeTop2ServicesContainer .ant-row .ant-col:nth-child(2) .SecondServiceItem div::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    z-index: -1;
+}
+
+.HomeTop2ServicesContainer .ant-row .ant-col:nth-child(2) .SecondServiceItem {
+    background-color: transparent;
+    /* padding: 20px; */
+    /* border-radius: 10px; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+
+
+.HomeTop2ServicesContainer .ant-row .ant-col:nth-child(3) .ThirdServiceItem {
+    background-color: black;
+    /* padding: 20px; */
+    /* border-radius: 10px; */
+    height: 100%;
+}
+
+.HomeTop2ServicesContainer .ant-row .ant-col:nth-child(3) .ThirdServiceItem div {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90%;
+}
+
+@media (max-width: 768px) {
+    .HomeTop2ServicesContainer{
+        margin-top: 0px !important;
+    }
+    .HomeTop2ServicesContainer .ant-row .ant-col:nth-child(3) .ThirdServiceItem{
+        height: unset !important;
+    }
+}

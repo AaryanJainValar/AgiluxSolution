@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Global AOS Blur-to-Clear Animation */
+[data-aos="blur-to-clear"] {
+  filter: blur(10px) !important;
+  opacity: 0 !important;
+  transform: translateY(30px) !important;
+  transition: all 0.5s ease-out !important;
+}
+
+[data-aos="blur-to-clear"].aos-animate {
+  filter: blur(0) !important;
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Enhanced fade animations with blur effect */
+[data-aos="fade-up"] {
+  filter: blur(5px) !important;
+  opacity: 0 !important;
+  transform: translateY(30px) !important;
+  transition: all 0.5s ease-out !important;
+}
+
+[data-aos="fade-up"].aos-animate {
+  filter: blur(0) !important;
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+[data-aos="fade-down"] {
+  filter: blur(5px) !important;
+  opacity: 0 !important;
+  transform: translateY(-30px) !important;
+  transition: all 0.5s ease-out !important;
+}
+
+[data-aos="fade-down"].aos-animate {
+  filter: blur(0) !important;
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+[data-aos="fade-left"] {
+  filter: blur(5px) !important;
+  opacity: 0 !important;
+  transform: translateX(30px) !important;
+  transition: all 0.5s ease-out !important;
+}
+
+[data-aos="fade-left"].aos-animate {
+  filter: blur(0) !important;
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+[data-aos="fade-right"] {
+  filter: blur(5px) !important;
+  opacity: 0 !important;
+  transform: translateX(-30px) !important;
+  transition: all 0.5s ease-out !important;
+}
+
+[data-aos="fade-right"].aos-animate {
+  filter: blur(0) !important;
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+/* Additional AOS blur effects */
+[data-aos="zoom-in"] {
+  filter: blur(8px) !important;
+  opacity: 0 !important;
+  transform: scale(0.8) !important;
+  transition: all 0.5s ease-out !important;
+}
+
+[data-aos="zoom-in"].aos-animate {
+  filter: blur(0) !important;
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
+
+[data-aos="zoom-out"] {
+  filter: blur(8px) !important;
+  opacity: 0 !important;
+  transform: scale(1.2) !important;
+  transition: all 0.5s ease-out !important;
+}
+
+[data-aos="zoom-out"].aos-animate {
+  filter: blur(0) !important;
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
+
+[data-aos="fade-in"] {
+  filter: blur(10px) !important;
+  opacity: 0 !important;
+  transition: all 0.5s ease-out !important;
+}
+
+[data-aos="fade-in"].aos-animate {
+  filter: blur(0) !important;
+  opacity: 1 !important;
+}
+
+/* Performance optimization */
+[data-aos] {
+  will-change: filter, opacity, transform;
+  backface-visibility: hidden;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  [data-aos] {
+    filter: none !important;
+    transition: opacity 0.3s ease !important;
+  }
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: 'Urbanist', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Urbanist', sans-serif;
+}
+
+h1 {
+  letter-spacing: -.2vw;
+  font-size: clamp(40px, 10.4vw, 200px);
+  font-weight: 400;
+  line-height: 1;
+  margin: 0px;
+}
+
+h2 {
+  color: white;
+  font-size: 60px;
+  letter-spacing: -.8px;
+  margin: 0px;
+  font-weight: 500;
+  line-height: 1.16667;
+}
+
+h3 {
+  color: white;
+  font-size: 40px;
+  letter-spacing: -.8px;
+  margin: 0px;
+  font-weight: 500;
+  line-height: 1.16667;
+}
+
+
+h4 {
+  font-size: 22px;
+  letter-spacing: -.15px;
+  margin: 0px;
+  font-weight: 500;
+  line-height: 1.16667;
+}
+
+a{
+  text-decoration: none;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+
+.Container {
+  max-width: 1340px;
+  margin: 0 auto;
+}
+
+.MarginBottomSmall {
+  margin-bottom: 20px;
+}
+
+.MarginBottomMedium {
+  margin-bottom: 50px;
+}
+
+.MarginTopSmall {
+  margin-top: 20px;
+}
+
+.MarginTopMedium {
+  margin-top: 50px;
+}
+
+.PaddingbottomMedium {
+  padding-bottom: 50px;
+}
+
+
+.ColorWhite {
+  color: white;
+}
+
+.ColorBlack {
+  color: black;
+}
+
+p {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  letter-spacing: -.6px;
+  font-weight: 500;
+  margin: 20px 0px;
+  line-height: 26px;
+  color: rgb(54, 54, 54);
+}
+
+ul li {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  color: rgb(54, 54, 54);
+}
+
+.SectionTopPadding {
+  padding-top: 5rem;
+}
+
+.MarginTopLarge {
+  margin-top: 5rem;
+}
+
+.Button {
+  border: 1px solid black;
+  padding: 14px 30px;
+  background-color: black;
+  color: white;
+  margin: 20px 0px;
+  position: relative;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.Button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #eab236;
+  transition: .5s;
+}
+
+.Button:hover {
+  border: 1px solid black;
+  transition: .5s;
+}
+
+.Button:hover::before {
+  width: 100%;
+  transition: .5s;
+}
+
+.Button span {
+  position: sticky;
+  transition: .5s;
+  color: white;
+}
+
+.Button:hover span {
+  color: black;
+  position: sticky;
+  transition: .5s;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.BrandColor span {
+  color: #eab236;
+}
+
+@media (max-width: 768px) {
+  .Container {
+    padding: 0 12px;
+    /* overflow: hidden; */
+  }
+}
+
+@media (min-width:1200px) and (max-width:1300px) {
+  .Container {
+    max-width: 1200px;
+  }
+}

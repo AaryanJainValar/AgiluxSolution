@@ -1,0 +1,230 @@
+.CareerContainer {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fff;
+}
+
+.CareerContent {
+    padding: 0 20px;
+}
+
+.CareerHeader {
+    max-width: 800px;
+    margin: 0 auto 50px;
+}
+
+.CareerHeader h3 {
+    font-size: 48px;
+    color: #000;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.CareerHeader h3 span {
+    color: #eab236;
+}
+
+.CareerHeader p {
+    font-size: 18px;
+    line-height: 28px;
+    color: #363636;
+    margin: 20px 0;
+}
+
+.CareerForm {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.FormGroup {
+    margin-bottom: 24px;
+}
+
+.FormLabel {
+    display: block;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 8px;
+    letter-spacing: -0.3px;
+}
+
+.Required {
+    color: #eab236;
+    margin-left: 2px;
+}
+
+.FormInput,
+.FormSelect,
+.FormTextArea {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #333;
+    transition: all 0.3s ease;
+    background-color: #fff;
+}
+
+.FormInput:focus,
+.FormSelect:focus,
+.FormTextArea:focus {
+    outline: none;
+    border-color: #eab236;
+    box-shadow: 0 0 0 3px rgba(234, 178, 54, 0.1);
+}
+
+.FormInput:hover,
+.FormSelect:hover,
+.FormTextArea:hover {
+    border-color: #bbb;
+}
+
+.FormTextArea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.UploadButton {
+    width: 100%;
+    padding: 12px 20px;
+    border: 2px dashed #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    color: #666;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.UploadButton:hover {
+    border-color: #eab236;
+    background-color: #fff;
+    color: #eab236;
+}
+
+.UploadHint {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #999;
+    font-family: 'Inter', sans-serif;
+}
+
+.UploadSuccess {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #52c41a;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+.UploadButton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.Button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.FormSubmitContainer {
+    margin-top: 20px;
+}
+
+.FormSubmitContainer .Button {
+    min-width: 200px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Ant Design Select Customization */
+.ant-select-selector {
+    border: 1px solid #ddd !important;
+    border-radius: 8px !important;
+    padding: 4px 11px !important;
+    height: auto !important;
+}
+
+.ant-select-focused .ant-select-selector {
+    border-color: #eab236 !important;
+    box-shadow: 0 0 0 3px rgba(234, 178, 54, 0.1) !important;
+}
+
+.ant-select:hover .ant-select-selector {
+    border-color: #bbb !important;
+}
+
+/* Ant Design Upload Customization */
+.ant-upload-list {
+    margin-top: 12px;
+}
+
+.ant-upload-list-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 8px 12px;
+}
+
+.ant-upload-list-item:hover {
+    border-color: #eab236;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .CareerHeader h3 {
+        font-size: 36px;
+    }
+
+    .CareerForm {
+        padding: 30px 20px;
+        border-radius: 12px;
+    }
+
+    .FormGroup {
+        margin-bottom: 20px;
+    }
+
+    .FormInput,
+    .FormSelect,
+    .FormTextArea {
+        font-size: 16px;
+    }
+
+    .FormSubmitContainer .Button {
+        width: 100%;
+        min-width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .CareerHeader h3 {
+        font-size: 28px;
+    }
+
+    .CareerHeader p {
+        font-size: 16px;
+    }
+
+    .CareerForm {
+        padding: 20px 15px;
+    }
+}
+
+
+.ant-select-selector{
+    border: none !important;
+}

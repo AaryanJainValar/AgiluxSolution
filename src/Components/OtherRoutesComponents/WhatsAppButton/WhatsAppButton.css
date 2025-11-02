@@ -1,0 +1,131 @@
+/* WhatsApp Button Container */
+.WhatsAppButtonContainer {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+/* WhatsApp Button */
+.WhatsAppButton {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.WhatsAppButton:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+.WhatsAppButton svg {
+    width: 25px;
+    height: 25px;
+    color: white;
+}
+
+/* Pulse Effect */
+.WhatsAppButtonPulse {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #25D366;
+    opacity: 0;
+    animation: pulse 2s infinite;
+}
+
+.WhatsAppButtonPulse::before,
+.WhatsAppButtonPulse::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #25D366;
+    opacity: 0;
+    animation: pulse 2s infinite;
+}
+
+.WhatsAppButtonPulse::before {
+    animation-delay: 0.5s;
+}
+
+.WhatsAppButtonPulse::after {
+    animation-delay: 1s;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.8);
+        opacity: 0;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .WhatsAppButtonContainer {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .WhatsAppButton {
+        width: 55px;
+        height: 55px;
+    }
+
+    .WhatsAppButtonPulse,
+    .WhatsAppButtonPulse::before,
+    .WhatsAppButtonPulse::after {
+        width: 55px;
+        height: 55px;
+    }
+
+    .WhatsAppButton svg {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media (max-width: 576px) {
+    .WhatsAppButtonContainer {
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .WhatsAppButton {
+        width: 50px;
+        height: 50px;
+    }
+
+    .WhatsAppButtonPulse,
+    .WhatsAppButtonPulse::before,
+    .WhatsAppButtonPulse::after {
+        width: 50px;
+        height: 50px;
+    }
+
+    .WhatsAppButton svg {
+        width: 24px;
+        height: 24px;
+    }
+}
+

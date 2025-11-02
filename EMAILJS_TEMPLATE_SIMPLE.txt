@@ -1,0 +1,30 @@
+===========================================
+NEW CAREER APPLICATION - Agilux Solution
+===========================================
+
+APPLICANT INFORMATION:
+---------------------
+Full Name: {{from_name}}
+Email: {{from_email}}
+Phone: {{phone}}
+Position Applied: {{position}}
+Experience: {{experience}}
+
+DESCRIPTION / COVER LETTER:
+----------------------------
+{{description}}
+
+RESUME / DOCUMENT:
+------------------
+View/Download Resume: {{resume_link}}
+
+Direct Link: {{resume_link}}
+
+---
+This email was automatically generated from the Agilux Solution Career Form.
+
+Reply to this email to contact the applicant: {{from_email}}
+
+© 2024 Agilux Solution
+website: agiluxsolution.com
+

@@ -1,0 +1,102 @@
+.Animated360ServicesItem {
+    padding: 10px 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.133);
+    transition: .5s;
+    /* position: relative; */
+}
+
+.Animated360ServicesItem::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 1.5px;
+    background-color: rgba(0, 0, 0, 0.596);
+    transition: .5s;
+}
+
+.Animated360ServicesItem:hover::before {
+    width: 100%;
+    transition: .5s;
+}
+
+
+
+.Animated360ServicesItem div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Animated360ServicesItem:hover {
+    padding: 20px 15px;
+    transition: .5s;
+    background-color: rgb(244, 244, 244);
+}
+
+.ViewMoreButton button {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    padding: 0px !important;
+}
+
+.ViewMoreButton button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.ViewMoreButton button span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ViewMoreButton button svg {
+    font-size: 20px;
+}
+
+.Animated360ServicesItem {
+    position: relative;
+}
+
+.Animated360ServicesItem:hover .ViewMoreButton button {
+    transform: rotate(-45deg);
+}
+
+.Animated360ServicesItem:hover .Animated360ServicesItemImage {
+    opacity: 1;
+    transition: .5s;
+}
+
+.Animated360ServicesItemImage {
+    width: 170px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+}
+
+
+.Animated360ServicesItem:hover .Animated360ServicesItemImage img {
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+    transform: rotate(0deg);
+}
+
+.Animated360ServicesItemImage img {
+    width: 0%;
+    height: 0%;
+    object-fit: cover;
+    transition: .5s;
+    transform: rotate(10deg);
+    border-radius: 20px;
+}

@@ -1,0 +1,332 @@
+#navigation-bar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 1000;
+    background-color: transparent;
+    padding: 20px 0;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform: translateY(0);
+}
+
+/* Scrolled state - white background and reduced padding */
+#navigation-bar.scrolled {
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Hidden state - slide up */
+#navigation-bar.hidden {
+    transform: translateY(-100%);
+}
+
+/* Visible state - slide down */
+#navigation-bar.visible {
+    transform: translateY(0);
+}
+
+.NavigationBarContainer {
+    padding: 0;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Hamburger Menu Button Styles */
+.hamburger-menu-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.hamburger-line {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform-origin: center;
+}
+
+/* Change hamburger line color when scrolled */
+.hamburger-menu-button.scrolled .hamburger-line {
+    background-color: #333;
+}
+
+/* Active state - transforms to X */
+.hamburger-menu-button.active .hamburger-line:first-child {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger-menu-button.active .hamburger-line:last-child {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Hover effects */
+.hamburger-menu-button:hover .hamburger-line {
+    background-color: #EBB236;
+}
+
+.hamburger-menu-button:hover {
+    transform: scale(1.1);
+}
+
+/* Focus styles removed */
+.hamburger-menu-button:focus {
+    outline: none;
+}
+
+/* Animation for smooth transition */
+.hamburger-menu-button.active:hover {
+    transform: scale(1.1);
+}
+
+/* Navigation Control Buttons Container */
+.NavigationControlButtonsContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+}
+
+/* Brand Logo Container */
+.BrandLogoContainer {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 130px;
+    position: relative;
+}
+
+.BrandLogoContainer img {
+    width: 200px;
+    height: 100%;
+}
+
+/* Logo smooth transition */
+.logo-image {
+    transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Navigation Container */
+.navigation-container {
+    position: absolute;
+    top: 55px;
+    right: 0;
+    min-width: 400px;
+    min-height: 300px;
+    background-color: white;
+    border-radius: 0px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    z-index: 1001;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px) scale(0.95);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Align navigation container with Container class */
+.NavigationBarContainer .Container {
+    position: relative;
+}
+
+/* Ensure proper alignment with the Container class */
+.NavigationBarContainer {
+    position: relative;
+}
+
+/* Show state */
+.navigation-container.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+/* Hide state */
+.navigation-container.hide {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px) scale(0.95);
+}
+
+/* Navigation Content */
+.navigation-content {
+    padding: 24px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation Header */
+.navigation-header {
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.navigation-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Navigation Links */
+.navigation-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+}
+
+.nav-link {
+    display: block;
+    padding: 12px 0px;
+    color: #666;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+
+.nav-link:hover {
+    /* background-color: #f8f9fa; */
+    color: #333;
+    transform: translateX(4px);
+}
+
+.nav-link:active {
+    transform: translateX(2px);
+}
+
+.nav-link svg {
+    font-size: 20px;
+}
+
+
+.navigation-links a {
+    font-size: 20px;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+/* Dynamic icon container inside link */
+.nav-icon {
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+}
+
+/* Plus icon shown when submenu exists */
+.nav-plus {
+    font-weight: 700;
+}
+
+/* Arrow icon for links without submenu */
+.nav-arrow {
+    font-size: 14px;
+}
+
+/* Nav item container */
+.nav-item {
+    margin-bottom: 4px;
+}
+
+/* Submenu styles */
+.submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    background-color: #f8f9fa;
+    /* border-radius: 8px; */
+    margin-top: 4px;
+}
+
+.submenu.open {
+    max-height: 300px;
+    /* Adjust based on content */
+}
+
+.submenu-link {
+    display: block;
+    padding: 10px 20px;
+    color: #666;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    border-left: 3px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.submenu-link:hover {
+    background-color: #e9ecef;
+    color: #333;
+    border-left-color: #EBB236;
+    padding-left: 24px;
+}
+
+/* Plus icon rotation animation */
+.nav-plus.rotated {
+    transform: rotate(180deg);
+}
+
+/* Hover effect for submenu links */
+/* .nav-link.has-submenu:hover {
+    background-color: #f8f9fa;
+} */
+
+.SocialMediaLinksContainer ul {
+    padding: 0px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid black;
+    padding-top: 20px;
+}
+
+.SocialMediaLinksContainer ul li {
+    border-left: 1px solid black;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+
+.SocialMediaLinksContainer ul li:first-child {
+    border-left: none;
+}
+
+
+
+.ContactDetailsContainer div:first-child p {
+    margin: 8px 0px;
+    text-align: end;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navigation-container {
+        right: 0;
+        width: 280px;
+        height: 280px;
+    }
+
+    .navigation-content {
+        padding: 20px;
+    }
+}
