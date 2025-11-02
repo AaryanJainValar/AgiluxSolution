@@ -8,6 +8,7 @@ import { IoAddOutline } from "react-icons/io5";
 import { LuMinus } from "react-icons/lu";
 import { LuPlus } from "react-icons/lu";
 import { Link, useNavigate } from "react-router-dom";
+
 const NavigationBar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [openSubmenu, setOpenSubmenu] = useState(null);
@@ -131,7 +132,7 @@ const NavigationBar = () => {
                         <div className="BrandLogoContainer">
                             <Link to="/">
                                 <img
-                                    src={isScrolled ? "/Images/AgiliuxBlackLogo.png" : "https://www.agiluxsolution.com/assets/AgiluxLogo-D4sQ30Ge.png"}
+                                    src={isScrolled ? "http://res.cloudinary.com/dvo30ytcq/image/upload/v1762110500/career/irkkah5syurqslyyr0jz.png" : "http://res.cloudinary.com/dvo30ytcq/image/upload/v1762110530/career/z1cay2avuek3yeiaenvs.png"}
                                     alt="Agilux Solution - Premier Digital Agency | Web Development, App Development & Social Media Marketing Ahmedabad Logo"
                                     className="logo-image"
                                     width="150"
