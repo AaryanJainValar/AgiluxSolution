@@ -50,13 +50,13 @@ const WhoWeAreHome = () => {
                     <div className={`WhoWeAreHomeContentGridImageText who-layer-4 ${animationStarted ? "animate" : ""}`}>
                         <h4 style={{ marginBottom: '16px', fontWeight: '600' }}>Client-Centered Approach</h4>
                         <p>Your goals are our priority. We work closely with you to understand your vision and deliver solutions that meet your specific needs, whether you're launching a new product or optimizing an existing system.</p>
-                        
+
                         <h4 style={{ marginBottom: '12px', marginTop: '24px', fontWeight: '600', fontSize: '1.1rem' }}>Comprehensive Expertise</h4>
                         <p>With a diverse range of services, we are your one-stop shop for all digital needs. From design and development to testing, deployment, and SEO, we cover every aspect of your project to ensure a seamless experience.</p>
-                        
+
                         <h4 style={{ marginBottom: '12px', marginTop: '24px', fontWeight: '600', fontSize: '1.1rem' }}>Innovation at the Core</h4>
                         <p>We are constantly exploring new technologies, methodologies, and tools to bring the most innovative solutions to the table. Our team leverages the latest trends in design, development, and automation to keep your business ahead of the curve.</p>
-                        
+
                         <div>
                             <Link to="/about-agilux">
                                 <button className="Button"><span>Learn More</span></button>
@@ -71,7 +71,7 @@ const WhoWeAreHome = () => {
                             <Row gutter={[40, 40]}>
                                 <Col lg={12} md={12} xs={24}>
                                     <div>
-                                        <h4 style={{ marginBottom: '12px', fontWeight: '600' }}>Agile Methodology</h4>
+                                        <h4 style={{ marginBottom: '12px', fontWeight: '600' }}>Agilux Methodology</h4>
                                         <p>We follow agile methodologies to ensure flexibility, faster delivery, and continuous improvement. Our iterative approach allows for constant feedback and refinement, ensuring the final product meets and exceeds your expectations.</p>
                                     </div>
                                 </Col>

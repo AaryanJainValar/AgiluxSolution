@@ -1,0 +1,30 @@
+{
+  "name": "Agilux Solution - Premier Digital Agency | Web Development, App Development & Social Media Marketing Ahmedabad",
+  "short_name": "Agilux Solution",
+  "description": "Leading digital agency in India offering comprehensive web development, mobile app development, UI/UX design, SEO, and digital marketing services. Premier social media marketing agency in Ahmedabad.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/public/Favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/public/Favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity", "technology"],
+  "lang": "en-US",
+  "dir": "ltr",
+  "scope": "/",
+  "prefer_related_applications": false
+}
+

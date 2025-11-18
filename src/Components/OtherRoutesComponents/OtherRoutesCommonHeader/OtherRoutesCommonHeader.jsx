@@ -8,9 +8,13 @@ const OtherRoutesCommonHeader = ({ image, title }) => {
             <div
                 className="OtherRoutesCommonHeaderImage"
             >
-                <ViewportRevealImage src={image} alt="Other Routes Common Header" data-aos="zoom-out"
+                <ViewportRevealImage 
+                    src={image} 
+                    alt={title ? `${title} - Agilux Solution | Premier Digital Agency | Web Development, App Development & Social Media Marketing Ahmedabad` : "Agilux Solution - Premier Digital Agency | Web Development, App Development & Social Media Marketing Ahmedabad"} 
+                    data-aos="zoom-out"
                     data-aos-duration="1000"
-                    data-aos-easing="ease-out-cubic" />
+                    data-aos-easing="ease-out-cubic" 
+                />
                 <div className="OtherRoutesCommonHeaderImageOverlayContent">
                     <div className="Container">
                         <h2

@@ -28,7 +28,12 @@ const ViewportRevealImage = ({
             className={`ViewportRevealImageContainer ${className}`}
         >
             <div className={`ViewportRevealImageWrapper ${isRevealed ? 'revealed' : ''} ${imageClassName}`}>
-                {src && <img src={src} alt={alt} />}
+                {src && <img 
+                    src={src} 
+                    alt={alt || "Agilux Solution - Premier Digital Agency | Web Development, App Development & Social Media Marketing Ahmedabad"} 
+                    loading="lazy"
+                    decoding="async"
+                />}
                 {children}
             </div>
         </div>

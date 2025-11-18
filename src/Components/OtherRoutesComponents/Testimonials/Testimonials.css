@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+
+.TestimonialsContentHeader {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.TestimonialsContentHeader span {
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #666;
+    font-weight: 500;
+}
+
+.TestimonialsContent {
+    padding: 20px 0;
+}
+
+.TestimonialCard {
+    height: 100%;
+    padding: 10px;
+}
+
+.TestimonialCardContent {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.TestimonialCardContent:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+}
+
+.TestimonialProfile {
+    margin-bottom: 20px;
+}
+
+.TestimonialProfile svg {
+    font-size: 50px;
+    opacity: 0.3;
+}
+
+.TestimonialText {
+    flex: 1;
+    margin-bottom: 25px;
+}
+
+.TestimonialQuote {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #4a4a4a;
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: -0.3px;
+}
+
+.TestimonialSignature {
+    /* text-align: center;/ */
+    margin-top: auto;
+}
+
+.TestimonialName {
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+    color: #333;
+    margin: 0 0 5px 0;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.TestimonialDesignation {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: #666;
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+}
+
+/* Swiper Pagination Styles */
+.TestimonialsContent .swiper-pagination {
+    position: relative;
+    margin-top: 40px;
+}
+
+.TestimonialsContent .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #333;
+    opacity: 0.3;
+    transition: opacity 0.3s ease;
+}
+
+.TestimonialsContent .swiper-pagination-bullet-active {
+    opacity: 1;
+    background-color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .TestimonialCardContent {
+        padding: 25px;
+    }
+
+    .TestimonialImage {
+        width: 60px;
+        height: 60px;
+    }
+
+    .TestimonialQuote {
+        font-size: 14px;
+    }
+
+    .TestimonialName {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .TestimonialCardContent {
+        padding: 20px;
+    }
+
+    .TestimonialImage {
+        width: 55px;
+        height: 55px;
+    }
+
+    .TestimonialQuote {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .TestimonialName {
+        font-size: 20px;
+    }
+
+    .TestimonialDesignation {
+        font-size: 12px;
+    }
+}
