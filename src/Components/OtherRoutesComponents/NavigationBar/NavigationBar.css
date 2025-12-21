@@ -322,8 +322,10 @@
 @media (max-width: 768px) {
     .navigation-container {
         right: 0;
-        width: 280px;
-        height: 280px;
+        left: 0px;
+        right: 0px;
+        /* width: 280px;
+        height: 280px; */
     }
 
     .navigation-content {
