@@ -12,6 +12,7 @@ import AllClients from './Components/OtherRoutesComponents/AllClients/AllClients
 import PerticularService from './Components/OtherRoutesComponents/Services/PerticularService'
 import WhatsAppButton from './Components/OtherRoutesComponents/WhatsAppButton/WhatsAppButton'
 import Career from './Components/OtherRoutesComponents/Career/Career'
+import PageTitleUpdater from './Components/OtherRoutesComponents/PageTitleUpdater/PageTitleUpdater'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -45,6 +46,7 @@ function App() {
     <>
 
       <NavigationBar />
+      <PageTitleUpdater />
       <Routes>
         <Route path="/" element={<HeroRoutes />} />
         <Route path="/about-agilux" element={<AboutUs />} />

@@ -21,7 +21,7 @@ const HomeTop2Services = () => {
                         <div className={`services-layer-1 ${animationStarted ? "animate" : ""}`}>
                             <div>
                                 <h3 className="ColorBlack BrandColor"><span>We build brands</span> that break the mold</h3>
-                                <button className="Button"><span>Get Started</span></button>
+                                {/* <button className="Button"><span>Get Started</span></button> */}
                             </div>
                             <div className="MarginTopMedium">
                                 <div className="FirstServiceItem">
