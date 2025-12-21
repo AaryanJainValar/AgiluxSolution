@@ -242,6 +242,7 @@ ul li {
 
 .SectionTopPadding {
   padding-top: 5rem;
+  overflow: hidden;
 }
 
 .MarginTopLarge {
