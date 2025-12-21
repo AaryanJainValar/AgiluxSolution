@@ -324,6 +324,7 @@
         right: 0;
         left: 0px;
         right: 0px;
+        min-width: 100% !important;
         /* width: 280px;
         height: 280px; */
     }
