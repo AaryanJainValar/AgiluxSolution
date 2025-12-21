@@ -121,9 +121,9 @@ const NavigationBar = () => {
     }, [lastScrollY]);
 
     return (
-        <div 
+        <div
             ref={navigationRef}
-            className={`NavigationBarContainer ${isScrolled ? 'scrolled' : ''} ${isVisible ? 'visible' : 'hidden'}`} 
+            className={`NavigationBarContainer ${isScrolled ? 'scrolled' : ''} ${isVisible ? 'visible' : 'hidden'}`}
             id="navigation-bar"
         >
             <div className="Container">
@@ -167,8 +167,8 @@ const NavigationBar = () => {
                                         <a
                                             href={item.link}
                                             className={`nav-link ${hasSubmenu ? 'has-submenu' : ''}`}
-                                            onClick={hasSubmenu 
-                                                ? (e) => handleSubmenuToggle(item.id, e) 
+                                            onClick={hasSubmenu
+                                                ? (e) => handleSubmenuToggle(item.id, e)
                                                 : (e) => handleLinkClick(item.link, e)
                                             }
                                         >
