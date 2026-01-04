@@ -191,6 +191,7 @@ a{
 .Container {
   max-width: 1340px;
   margin: 0 auto;
+  padding: 20px;
 }
 
 .MarginBottomSmall {
@@ -225,7 +226,7 @@ a{
 p {
   font-family: 'Inter', sans-serif;
   font-size: 16px;
-  letter-spacing: -.6px;
+  letter-spacing: 0.3px;
   font-weight: 500;
   margin: 20px 0px;
   line-height: 26px;
@@ -300,13 +301,16 @@ ul li {
 .BrandColor span {
   color: #eab236;
 }
+.swiper-pagination{
+  display: none;
+}
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .Container {
     padding: 0 12px;
-    /* overflow: hidden; */
+    overflow: hidden;
   }
-}
+} */
 
 @media (min-width:1200px) and (max-width:1300px) {
   .Container {
