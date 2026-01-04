@@ -122,6 +122,52 @@
     align-items: stretch;
 }
 
+/* In-page services header (black) */
+.ServicesPageHeader {
+    background: #000;
+    color: #fff;
+    padding: 14px 0;
+}
+.ServicesPageHeaderInner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+.ServicesHeaderLogo img {
+    height: 46px;
+    width: auto;
+}
+.ServicesHeaderMenu {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+.ServicesHeaderMenuItem {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    padding: 8px 10px;
+    cursor: pointer;
+}
+.ServicesHeaderMenuItem:hover,
+.ServicesHeaderMenuItem:focus {
+    background: rgba(255,255,255,0.06);
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+    .ServicesPageHeaderInner {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .ServicesHeaderMenu {
+        display: none; /* hide long menu on small screens */
+    }
+}
+
 .ServiceCard {
     display: flex;
     flex-direction: column;
@@ -265,28 +311,106 @@
     margin-top: 25px;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
 }
 .ViewAllLink {
+    position: relative;
+    /* overflow: hidden; */
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    color: #b31616;
+    color: #ffffff;
     text-decoration: none;
     font-weight: 600;
-    border: 1px solid rgba(179,22,22,0.25);
-    border-radius: 999px;
+    /* border: 1px solid rgba(179,22,22,0.25); */
+    /* border-radius: 999px; */
     padding: 10px 14px;
-    background: rgba(255,255,255,0.7);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.06);
-    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    /* background: rgb(0, 0, 0); */
+    transition: color 0.25s ease;
 }
-.ViewAllLink:hover {
+
+.ActionsRight {
+  border: 1px solid black;
+  padding: 8px 15px;
+  background-color: black;
+  color: white;
+  margin: 20px 0px;
+  position: relative;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.ActionsRight::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #eab236;
+  transition: .5s;
+}
+
+.ActionsRight:hover {
+  border: 1px solid black;
+  transition: .5s;
+}
+
+.ActionsRight:hover::before {
+  width: 100%;
+  transition: .5s;
+}
+
+.ActionsRight span {
+  position: sticky;
+  transition: .5s;
+  color: white;
+}
+
+.ActionsRight:hover span {
+  color: black;
+  position: sticky;
+  transition: .5s;
+}
+
+
+/* keep text/icon above the overlay */
+.ViewAllLink .ViewAllText,
+.ViewAllLink .ArrowIcon {
+    position: relative;
+    z-index: 1;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+/* trigger on mouse-down / focus (keyboard) */
+.ViewAllLink:active::before,
+.ViewAllLink:focus::before,
+.ViewAllLink:focus-visible::before {
+    transform: translateX(0);
+}
+
+.ViewAllLink:active,
+.ViewAllLink:focus,
+.ViewAllLink:focus-visible {
+    color: #000000;
+}
+
+.ViewAllLink:active .ArrowIcon svg,
+.ViewAllLink:focus .ArrowIcon svg,
+.ViewAllLink:focus-visible .ArrowIcon svg {
+    color: #000000;
+    transform: translateX(3px);
+}
+
+/* optional class for JS-driven persistent state */
+.ViewAllLink.is-active::before { transform: translateX(0); }
+.ViewAllLink.is-active { color: #000; }
+/* .ViewAllLink:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 18px rgba(0,0,0,0.1);
     background: rgba(255,255,255,0.85);
-}
+} */
 .ViewAllText {
     letter-spacing: 0.2px;
 }
@@ -305,7 +429,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 18px;
-    margin-top: 24px;
+    margin-top: 8rem;
 }
 .AllServiceCard {
     background: #fff;
@@ -388,6 +512,7 @@
     .AllServicesGrid {
         grid-template-columns: 1fr;
         gap: 14px;
+        margin-top: 4rem;
     }
 }
 
@@ -449,7 +574,7 @@
         border-radius: 14px;
     }
     .NewServiceOverlayTitle {
-        bottom: 16px;
+        bottom: -9px;
         left: 14px;
         font-size: 0.95rem;
         padding: 8px 10px;

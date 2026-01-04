@@ -235,9 +235,9 @@ const Three60MarketingData = [
             </>
         ),
         image:
-            "https://img.freepik.com/free-photo/representation-user-experience-interface-design_23-2150169839.jpg?t=st=1767374240~exp=1767377840~hmac=d0294654a2a18f1da7705e26e26c871afa9081f8fe5123d5ead96c484503051a&w=2000",
+            "https://img.freepik.com/free-photo/representation-user-experience-interface-design_23-2150169863.jpg?t=st=1767551688~exp=1767555288~hmac=ff30e6d29de5e637362b41bd7d99b86599ed935d163872c800e13191e0c6d77e&w=2000",
         subtitle: "Cross-platform and native mobile solutions",
-        technologies: ["Flutter", "React Native", "Kotlin", "Swift", "Xamarin", "Ionic", "Cordova", "Java"],
+        // technologies: ["Flutter", "React Native", "Kotlin", "Swift", "Xamarin", "Ionic", "Cordova", "Java"],
     },
     {
         title: "SEO Services",
@@ -424,7 +424,7 @@ const Three60MarketingData = [
             </>
         ),
         image:
-            "https://img.freepik.com/free-photo/customer-relationship-management-concept_23-2150038396.jpg?t=st=1767521142~exp=1767524742~hmac=9e65e72b9d43353889ed6db375b8105517b98802b71241686202b46525a01a1b&w=1480",
+            "https://img.freepik.com/free-photo/customer-relationship-management-concept_23-2150038418.jpg?t=st=1767551804~exp=1767555404~hmac=be5a6876393a685efac1de3bb52d6c486240e9e5ea7cecb7affa291fee588420&w=1480",
     },
     {
         title: "ERP Software Development",
@@ -461,7 +461,7 @@ const Three60MarketingData = [
             </>
         ),
         image:
-            " https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010125.jpg?t=st=1767521024~exp=1767524624~hmac=86ebb9d59fe0c70fa719cdf29da833ca7f8ce790da7f59ad541baec180bc9e1d&w=1480",
+            "https://img.freepik.com/free-photo/person-working-html-computer_23-2150038857.jpg",
     },
 
     {

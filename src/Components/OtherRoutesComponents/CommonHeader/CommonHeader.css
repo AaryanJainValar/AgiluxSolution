@@ -11,6 +11,11 @@ h3 span {
     color: #eab236;
 }
 
+/* red highlight utility for specific phrases */
+.CommonHeaderContainer h3 .RedText {
+    color: #b31616;
+}
+
 @media (max-width: 768px) {
     .CommonHeaderContent {
         grid-template-columns: 1fr;

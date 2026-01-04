@@ -108,7 +108,7 @@
 
 .BrandLogoContainer img {
     width: 200px;
-    height: 100%;
+    /* height: 100%;/ */
 }
 
 /* Logo smooth transition */
@@ -137,6 +137,7 @@
 /* Align navigation container with Container class */
 .NavigationBarContainer .Container {
     position: relative;
+    padding: 0px !important;
 }
 
 /* Ensure proper alignment with the Container class */
@@ -331,5 +332,79 @@
 
     .navigation-content {
         padding: 20px;
+    }
+}
+
+/* Styles for servicesitems page: black top bar with inline menu */
+.NavigationBarContainer.services-page,
+#navigation-bar.services-page {
+    background-color: #000 !important;
+    backdrop-filter: none;
+}
+.NavigationBarContainer.services-page .BrandLogoContainer img {
+    filter: none;
+}
+.NavigationBarContainer.services-page .hamburger-menu-button {
+    display: none;
+}
+
+/* Styles for services item pages: white top bar, black logo and controls */
+.NavigationBarContainer.services-item-page,
+#navigation-bar.services-item-page {
+    background-color: #fff !important;
+    backdrop-filter: none;
+}
+.NavigationBarContainer.services-item-page .BrandLogoContainer img {
+    filter: none;
+}
+.NavigationBarContainer.services-item-page .hamburger-line {
+    background-color: #333;
+}
+.NavigationBarContainer.services-item-page .hamburger-menu-button.scrolled .hamburger-line {
+    background-color: #333;
+}
+.NavigationBarContainer.services-item-page .NavigationControlButtonsContainer,
+.NavigationBarContainer.services-item-page .ServicesMenuInline {
+    color: #000;
+}
+.NavigationBarContainer.services-item-page .navigation-container {
+    background-color: #fff;
+}
+.NavigationBarContainer.services-item-page .navigation-links a,
+.NavigationBarContainer.services-item-page .nav-link,
+.NavigationBarContainer.services-item-page .nav-icon,
+.NavigationBarContainer.services-item-page .submenu-link {
+    color: #000;
+}
+.ServicesMenuInline {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    justify-content: flex-end;
+}
+.services-inline-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 10px;
+    border-radius: 6px;
+    transition: background 0.18s ease, color 0.18s ease, transform 0.12s ease;
+}
+.services-inline-link:hover,
+.services-inline-link:focus {
+    background: rgba(255,255,255,0.06);
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+    .ServicesMenuInline {
+        display: none; /* keep hamburger for mobile */
+    }
+    .NavigationBarContainer.services-page .hamburger-menu-button {
+        display: block;
+    }
+    .NavigationBarContainer .Container{
+    padding: 0px 10px !important;
     }
 }

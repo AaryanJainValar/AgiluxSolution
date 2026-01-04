@@ -86,78 +86,82 @@ const Three60Marketing = () => {
     };
     return (
         <>
-        <div className="Three60MarketingContainer SectionTopPadding" id="three-60-marketing">
-            <div className="Container">
-                <CommonHeader title="We Serve" description="
-                We make strategy for a projects from it's inception to end." />
-                <div className="ServicesTopActions">
-                    <div className="ActionsRight">
-                        <Link to="/servicesitems" className="ViewAllLink">
-                            <span className="ViewAllText">View All Services</span>
-                            <span className="ArrowIcon"><IoIosArrowRoundForward /></span>
-                        </Link>
-                    </div>
-                </div>
-                <div className="MarginTopMedium">
-                    <Swiper
-                        modules={[Autoplay, Pagination]}
-                        spaceBetween={24}
-                        slidesPerView={4}
-                        speed={1300}
-                        loop={true}
-                        autoplay={{ delay: 2800, disableOnInteraction: false }}
-                        pagination={{ clickable: true }}
-                        grabCursor={true}
-                        breakpoints={{
-                            0: { slidesPerView: 1.15, spaceBetween: 16, centeredSlides: true },
-                            480: { slidesPerView: 1.25, spaceBetween: 16, centeredSlides: true },
-                            640: { slidesPerView: 1.5, spaceBetween: 18, centeredSlides: true },
-                            768: { slidesPerView: 2, spaceBetween: 20, centeredSlides: false },
-                            1024: { slidesPerView: 4 }
-                        }}
-                    >
-                        {Three60MarketingData
-                            .filter((item) => {
-                                const t = item.title.toLowerCase().replace(/\s+/g, ' ').trim();
-                                const featuredSet = new Set([
-                                    "digital marketing",               // Social Media Marketing alias
-                                    "website development",
-                                    "app development",
-                                    "seo services",
-                                    "erp software development",
-                                    "cms development"
-                                ]);
-                                return featuredSet.has(t);
-                            })
-                            .map((item, index) => (
-                            <SwiperSlide key={index}>
-                                <div className="NewServiceCard">
-                                    <div className="NewServiceImage">
-                                        <img
-                                            src={Array.isArray(item.image) ? item.image[0] : item.image}
-                                            alt={`${item.title} Services by Agilux Solution`}
-                                            loading="lazy"
-                                        />
-                                        <div className="NewServiceOverlay">
-                                            <h4 className="NewServiceOverlayTitle">{item.title}</h4>
+            <div className="Three60MarketingContainer SectionTopPadding" id="three-60-marketing">
+                <div className="Container">
+                    <CommonHeader
+                        title="We Serve"
+                        description={<>We<span className="#EAB236"> make strategy for a projects</span> from it's inception to end.</>}
+                    />
+                    <div className="MarginTopMedium">
+                        <Swiper
+                            modules={[Autoplay, Pagination]}
+                            spaceBetween={24}
+                            slidesPerView={4}
+                            speed={1300}
+                            loop={true}
+                            autoplay={{ delay: 2800, disableOnInteraction: false }}
+                            pagination={{ clickable: true }}
+                            grabCursor={true}
+                            breakpoints={{
+                                0: { slidesPerView: 1.15, spaceBetween: 16, centeredSlides: true },
+                                480: { slidesPerView: 1.25, spaceBetween: 16, centeredSlides: true },
+                                640: { slidesPerView: 1.5, spaceBetween: 18, centeredSlides: true },
+                                768: { slidesPerView: 2, spaceBetween: 20, centeredSlides: false },
+                                1024: { slidesPerView: 4 }
+                            }}
+                        >
+                            {Three60MarketingData
+                                .filter((item) => {
+                                    const t = item.title.toLowerCase().replace(/\s+/g, ' ').trim();
+                                    const featuredSet = new Set([
+                                        "digital marketing",               // Social Media Marketing alias
+                                        "website development",
+                                        "app development",
+                                        "seo services",
+                                        "erp software development",
+                                        "cms development"
+                                    ]);
+                                    return featuredSet.has(t);
+                                })
+                                .map((item, index) => (
+                                    <SwiperSlide key={index}>
+                                        <div className="NewServiceCard">
                                             <Link
                                                 to={`/servicesitems/${createSlug(item.title)}`}
-                                                className="NewServiceCTA"
+                                                className="NewServiceImageLink"
                                                 aria-label={`View ${item.title}`}
                                             >
-                                                <IoIosArrowRoundForward />
+                                                <div className="NewServiceImage">
+                                                    <img
+                                                        src={Array.isArray(item.image) ? item.image[0] : item.image}
+                                                        alt={`${item.title} Services by Agilux Solution`}
+                                                        loading="lazy"
+                                                    />
+                                                    <div className="NewServiceOverlay">
+                                                        <h4 className="NewServiceOverlayTitle">{item.title}</h4>
+                                                        <span className="NewServiceCTA" aria-hidden="true">
+                                                            <IoIosArrowRoundForward />
+                                                        </span>
+                                                    </div>
+                                                </div>
                                             </Link>
                                         </div>
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                        ))}
-                    </Swiper>
+                                    </SwiperSlide>
+                                ))}
+                        </Swiper>
+                        <div className="ServicesTopActions">
+                            <div className="ActionsRight">
+                                <Link to="/servicesitems" className="ViewAllLink">
+                                    <span className="ViewAllText">View All Services</span>
+                                    {/* <span className="ArrowIcon"><IoIosArrowRoundForward /></span> */}
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        {/* <Technologies /> */}
-        
+            {/* <Technologies /> */}
+
         </>
     );
 };

@@ -7,7 +7,7 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 import { IoAddOutline } from "react-icons/io5";
 import { LuMinus } from "react-icons/lu";
 import { LuPlus } from "react-icons/lu";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 const NavigationBar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,6 +17,11 @@ const NavigationBar = () => {
     const [lastScrollY, setLastScrollY] = useState(0);
     const navigationRef = useRef(null);
     const navigate = useNavigate();
+    const location = useLocation();
+
+    // Routes that should always display the "scrolled" (dark) style by default
+    const alwaysScrolledRoutes = ['/servicesitems'];
+    const isRouteAlwaysScrolled = alwaysScrolledRoutes.some((route) => location.pathname.startsWith(route));
 
     // Function to close menu
     const closeMenu = () => {
@@ -92,6 +97,14 @@ const NavigationBar = () => {
         const controlNavbar = () => {
             const currentScrollY = window.scrollY;
 
+            // If this route should always look "scrolled", force scrolled styles
+            if (isRouteAlwaysScrolled) {
+                setIsScrolled(true);
+                setIsVisible(true);
+                setLastScrollY(currentScrollY);
+                return;
+            }
+
             // Check if scrolled more than 100px
             if (currentScrollY > 100) {
                 setIsScrolled(true);
@@ -114,11 +127,14 @@ const NavigationBar = () => {
         // Add scroll event listener
         window.addEventListener('scroll', controlNavbar);
 
+        // Run once to set initial state based on route / scroll
+        controlNavbar();
+
         // Cleanup function
         return () => {
             window.removeEventListener('scroll', controlNavbar);
         };
-    }, [lastScrollY]);
+    }, [lastScrollY, isRouteAlwaysScrolled]);
 
     return (
         <div
