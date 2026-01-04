@@ -70,7 +70,7 @@ import 'swiper/css/pagination';
 import CommonHeader from "../CommonHeader/CommonHeader";
 import Three60MarketingData from "./360MarketingData";
 import { Link } from "react-router-dom";
-// import Technologies from "../../Technologies/Technologies";
+import Technologies from "../../Technologies/Technologies";
 import { IoIosArrowRoundForward } from "react-icons/io";
 
 
