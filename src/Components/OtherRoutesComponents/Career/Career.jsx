@@ -463,7 +463,7 @@ const Career = () => {
                                         >
                                             {isUploading ? (
                                                 <>
-                                                    <LoadingOutlined /> Uploading....
+                                                    <LoadingOutlined /> Uploading to Cloudinary...
                                                 </>
                                             ) : (
                                                 <>
