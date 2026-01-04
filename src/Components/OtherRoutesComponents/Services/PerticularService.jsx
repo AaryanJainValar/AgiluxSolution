@@ -56,9 +56,9 @@ const PerticularService = () => {
                 <div className="PerticularServiceContent">
                     <h3 className="ColorBlack">{service.title}</h3>
                     {/* <h3 className="ColorBlack">{service.title}</h3> */}
-                    <div className="Max800" style={{ margin: '20px auto' }}>
+                    <p className="Max800" style={{ margin: '20px auto' }}>
                         {service.description}
-                    </div>
+                    </p>
                 </div>
             </div>
         </div>

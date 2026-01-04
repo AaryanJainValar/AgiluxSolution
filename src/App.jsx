@@ -1,4 +1,5 @@
-import { useEffect } from 'react'
+import { useState, useEffect } from 'react'
+import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import './App.css'
 import HeroRoutes from './Components/HomeComponents/HeroRoutes/HeroRoutes'
@@ -9,12 +10,13 @@ import AboutUs from './Components/OtherRoutesComponents/AboutUs/AboutUs'
 import Services from './Components/OtherRoutesComponents/Services/Services'
 import AllClients from './Components/OtherRoutesComponents/AllClients/AllClients'
 import PerticularService from './Components/OtherRoutesComponents/Services/PerticularService'
-import ServicesSecound from './Components/OtherRoutesComponents/Services/ServicesSecound'
 import WhatsAppButton from './Components/OtherRoutesComponents/WhatsAppButton/WhatsAppButton'
 import Career from './Components/OtherRoutesComponents/Career/Career'
 import PageTitleUpdater from './Components/OtherRoutesComponents/PageTitleUpdater/PageTitleUpdater'
 
 function App() {
+  const [count, setCount] = useState(0)
+
   // Initialize AOS when component mounts
   useEffect(() => {
     // Check if AOS is available
@@ -50,8 +52,6 @@ function App() {
         <Route path="/about-agilux" element={<AboutUs />} />
         <Route path="/services" element={<Services />} />
         <Route path="/services/:serviceName" element={<PerticularService />} />
-        <Route path="/servicesitems" element={<ServicesSecound />} />
-        <Route path="/servicesitems/:serviceName" element={<PerticularService />} />
         <Route path="/all-clients" element={<AllClients />} />
         <Route path="/career" element={<Career />} />
       </Routes>
