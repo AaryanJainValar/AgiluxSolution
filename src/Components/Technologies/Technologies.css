@@ -1,0 +1,196 @@
+.TechnologiesContainer {
+    padding: 15px 0;
+}
+
+.Technologiesheading {
+    margin-top: 8vh;
+}
+
+.TechCard {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #fafbff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+    /* cursor: pointer; */
+}
+
+.TechHeader {
+    padding: 20px 24px;
+    background: white;
+    color: transparent;
+}
+
+.TechHeaderMain {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.TechHeader h4 {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: black;
+}
+
+.TechHeader p {
+    margin: 8px 0 0 0;
+    opacity: 0.9;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: black;
+}
+
+.CollapseToggle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50px;
+    background: black;
+    border: 1px solid black;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+
+
+.CollapseToggle.collapsed {
+    transform: rotate(180deg);
+}
+
+.SegmentControl {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+}
+
+
+.SegmentButton {
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: black;
+    color: #ffffff;
+    font-size: 0.95rem;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    backdrop-filter: blur(2px);
+}
+
+.SegmentButton:hover {
+    background: rgba(255, 255, 255, 0.28);
+}
+
+.SegmentButton.active {
+    background: #ffffff;
+    color: #3a2a7e;
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.TechToggle {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+}
+
+.ToggleButton {
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: #ffffff;
+    color: #222;
+    font-size: 0.95rem;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.ToggleButton:hover {
+    background: #f3f6ff;
+}
+
+.ToggleButton.active {
+    background: #eaf1ff;
+    border-color: rgba(0, 0, 0, 0.12);
+}
+
+.TechBody {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 16px 20px 20px 20px;
+    background: #f3f6ff;
+}
+
+.TechChip {
+    display: inline-block;
+    padding: 10px 14px;
+    border-radius: 999px;
+    background: #ffffff;
+    color: #222;
+    font-size: 0.95rem;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+}
+
+.TechImages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px 20px 22px 20px;
+    background: #ffffff;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.TechImageItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 120px;
+    padding: 14px;
+    border-radius: 16px;
+    background: #f8fbff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+}
+
+.TechImageItem img {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    border-radius: 12px;
+    background: #ffffff;
+    padding: 6px;
+    /* border: 1px solid rgba(0, 0, 0, 0.06); */
+}
+
+.TechImageItem span {
+    font-size: 0.85rem;
+    color: #222;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .TechnologiesContainer {
+        padding: 24px 0;
+    }
+
+    .TechHeader h4 {
+        font-size: 1.2rem;
+    }
+
+    .TechToggle {
+        gap: 8px;
+    }
+}

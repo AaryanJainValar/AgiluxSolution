@@ -1,9 +1,8 @@
 import { useEffect } from 'react';
-import { useLocation, useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 const PageTitleUpdater = () => {
     const location = useLocation();
-    const params = useParams();
 
     useEffect(() => {
         const path = location.pathname;
@@ -15,7 +14,9 @@ const PageTitleUpdater = () => {
             title = "About Agilux | Leading Digital Agency";
         } else if (path === "/services") {
             title = "Our Services | Strategic Digital Solutions";
-        } else if (path.startsWith("/services/")) {
+        } else if (path === "/servicesitems") {
+            title = "All Services | Strategic Digital Solutions";
+        } else if (path.startsWith("/services/") || path.startsWith("/servicesitems/")) {
             // Extract service name from URL or params
             const serviceName = path.split('/').pop()?.replace(/-/g, ' ');
             const capitalizedServiceName = serviceName

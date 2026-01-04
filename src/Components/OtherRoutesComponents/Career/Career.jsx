@@ -473,7 +473,7 @@ const Career = () => {
                                         </button>
                                     </Upload>
                                     <p className="UploadHint">
-                                        Accepted formats: PDF, DOC, DOCX, Images (JPG, PNG, GIF, WEBP, SVG) - Max size: 10MB - Files are uploaded to Cloudinary
+                                        Accepted formats: PDF, DOC, DOCX, Images (JPG, PNG, GIF, WEBP, SVG) - Max size: 10MB
                                     </p>
                                     {formData.resumeUrl && (
                                         <p className="UploadSuccess">
