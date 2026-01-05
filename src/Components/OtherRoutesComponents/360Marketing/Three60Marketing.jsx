@@ -61,7 +61,7 @@
 
 
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Three60Marketing.css";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
@@ -84,6 +84,34 @@ const Three60Marketing = () => {
             .replace(/[^a-z0-9]+/g, '-')
             .replace(/^-+|-+$/g, '');
     };
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        if (typeof window === 'undefined') return;
+        const mq = window.matchMedia('(max-width: 768px)');
+        const handle = (e) => setIsMobile(e.matches);
+        setIsMobile(mq.matches);
+        if (mq.addEventListener) mq.addEventListener('change', handle);
+        else mq.addListener(handle);
+        return () => {
+            if (mq.removeEventListener) mq.removeEventListener('change', handle);
+            else mq.removeListener(handle);
+        };
+    }, []);
+
+    const featuredItems = Three60MarketingData.filter((item) => {
+        const t = item.title.toLowerCase().replace(/\s+/g, ' ').trim();
+        const featuredSet = new Set([
+            "digital marketing",
+            "website development",
+            "app development",
+            "seo services",
+            "erp software development",
+            "cms development"
+        ]);
+        return featuredSet.has(t);
+    });
+
     return (
         <>
             <div className="Three60MarketingContainer SectionTopPadding" id="three-60-marketing">
@@ -92,38 +120,52 @@ const Three60Marketing = () => {
                         title="We Serve"
                         description={<>We<span className="#EAB236"> make strategy for a projects</span> from it's inception to end.</>}
                     />
-                    <div className="MarginTopMedium">
-                        <Swiper
-                            modules={[Autoplay, Pagination]}
-                            spaceBetween={24}
-                            slidesPerView={4}
-                            speed={1300}
-                            loop={true}
-                            autoplay={{ delay: 2800, disableOnInteraction: false }}
-                            pagination={{ clickable: true }}
-                            grabCursor={true}
-                            breakpoints={{
-                                0: { slidesPerView: 1.15, spaceBetween: 16, centeredSlides: true },
-                                480: { slidesPerView: 1.25, spaceBetween: 16, centeredSlides: true },
-                                640: { slidesPerView: 1.5, spaceBetween: 18, centeredSlides: true },
-                                768: { slidesPerView: 2, spaceBetween: 20, centeredSlides: false },
-                                1024: { slidesPerView: 4 }
-                            }}
-                        >
-                            {Three60MarketingData
-                                .filter((item) => {
-                                    const t = item.title.toLowerCase().replace(/\s+/g, ' ').trim();
-                                    const featuredSet = new Set([
-                                        "digital marketing",               // Social Media Marketing alias
-                                        "website development",
-                                        "app development",
-                                        "seo services",
-                                        "erp software development",
-                                        "cms development"
-                                    ]);
-                                    return featuredSet.has(t);
-                                })
-                                .map((item, index) => (
+                        <div className="MarginTopMedium">
+                        {isMobile ? (
+                            <div className="NewMarketingGrid MobileGrid">
+                                {featuredItems.map((item, index) => (
+                                    <div key={index} className="NewServiceCard">
+                                        <Link
+                                            to={`/servicesitems/${createSlug(item.title)}`}
+                                            className="NewServiceImageLink"
+                                            aria-label={`View ${item.title}`}
+                                        >
+                                            <div className="NewServiceImage">
+                                                <img
+                                                    src={Array.isArray(item.image) ? item.image[0] : item.image}
+                                                    alt={`${item.title} Services by Agilux Solution`}
+                                                    loading="lazy"
+                                                />
+                                                <div className="NewServiceOverlay">
+                                                    <h4 className="NewServiceOverlayTitle">{item.title}</h4>
+                                                    <span className="NewServiceCTA" aria-hidden="true">
+                                                        <IoIosArrowRoundForward />
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </Link>
+                                    </div>
+                                ))}
+                            </div>
+                        ) : (
+                            <Swiper
+                                modules={[Autoplay, Pagination]}
+                                spaceBetween={24}
+                                slidesPerView={4}
+                                speed={1300}
+                                loop={true}
+                                autoplay={{ delay: 2800, disableOnInteraction: false }}
+                                pagination={{ clickable: true }}
+                                grabCursor={true}
+                                breakpoints={{
+                                    0: { slidesPerView: 1.15, spaceBetween: 16, centeredSlides: true },
+                                    480: { slidesPerView: 1.25, spaceBetween: 16, centeredSlides: true },
+                                    640: { slidesPerView: 1.5, spaceBetween: 18, centeredSlides: true },
+                                    768: { slidesPerView: 2, spaceBetween: 20, centeredSlides: false },
+                                    1024: { slidesPerView: 4 }
+                                }}
+                            >
+                                {featuredItems.map((item, index) => (
                                     <SwiperSlide key={index}>
                                         <div className="NewServiceCard">
                                             <Link
@@ -148,7 +190,8 @@ const Three60Marketing = () => {
                                         </div>
                                     </SwiperSlide>
                                 ))}
-                        </Swiper>
+                            </Swiper>
+                        )}
                         <div className="ServicesTopActions">
                             <div className="ActionsRight">
                                 <Link to="/servicesitems" className="ViewAllLink">

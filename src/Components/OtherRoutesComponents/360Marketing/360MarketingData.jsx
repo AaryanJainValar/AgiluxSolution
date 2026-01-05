@@ -235,7 +235,7 @@ const Three60MarketingData = [
             </>
         ),
         image:
-            "https://img.freepik.com/free-photo/representation-user-experience-interface-design_23-2150169863.jpg?t=st=1767551688~exp=1767555288~hmac=ff30e6d29de5e637362b41bd7d99b86599ed935d163872c800e13191e0c6d77e&w=2000",
+            " https://imgs.search.brave.com/yTnHdM12qXkw7URyCZc4oCXmxi1DsaE5dZFlO1glrZI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cy4x/MjNyZi5jb20vNDUw/d20vemluZXRyb24v/emluZXRyb24yNDAz/L3ppbmV0cm9uMjQw/MzAyMjg4LzIyNjQw/NzAxOC1kZXNpZ24t/bGF5b3V0LWVsZW1l/bnRzLW1vYmlsZS1k/ZXNpZ24taW4tYWly/LWFyb3VuZC1oYW5n/aW5nLXBob25lLWRl/dmVsb3Blci1sYXB0/b3AtcHJvZ3JhbW1p/bmcuanBnP3Zlcj02",
         subtitle: "Cross-platform and native mobile solutions",
         // technologies: ["Flutter", "React Native", "Kotlin", "Swift", "Xamarin", "Ionic", "Cordova", "Java"],
     },
@@ -424,7 +424,7 @@ const Three60MarketingData = [
             </>
         ),
         image:
-            "https://img.freepik.com/free-photo/customer-relationship-management-concept_23-2150038418.jpg?t=st=1767551804~exp=1767555404~hmac=be5a6876393a685efac1de3bb52d6c486240e9e5ea7cecb7affa291fee588420&w=1480",
+            "https://imgs.search.brave.com/g5JFll_s8NL-0HATfXGFoN09s_9R3wFJyIpOzNUkStk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9jbXMtY29udGVu/dC1tYW5hZ2VtZW50/LXN5c3RlbS1jb25j/ZXB0LXBlcnNvbi1o/YW5kLXVzaW5nLWxh/cHRvcC1jb21wdXRl/ci13aXRoLWNvbnRl/bnQtbWFuYWdlbWVu/dC1zeXN0ZW0taWNv/bi12aXJ0dWFsLXNj/cmVlbi1iYWNrZ3Jv/dW5kLWJ1c2luZXNz/LXdlYi1jb21wdXRl/ci13ZWJzaXRlLWFk/bWluaXN0cmF0aW9u/XzEyOTY0OTctMTUz/LmpwZz9zZW10PWFp/c19oeWJyaWQmdz03/NDA",
     },
     {
         title: "ERP Software Development",

@@ -1,120 +1,3 @@
-/* .Animated360ServicesItem {
-    padding: 10px 20px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.133);
-    transition: .5s;
-   
-}
-
-.Animated360ServicesItem::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0%;
-    height: 1.5px;
-    background-color: rgba(0, 0, 0, 0.596);
-    transition: .5s;
-}
-
-.Animated360ServicesItem:hover::before {
-    width: 100%;
-    transition: .5s;
-}
-
-
-
-.Animated360ServicesItem div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.Animated360ServicesItem:hover {
-    padding: 20px 15px;
-    transition: .5s;
-    background-color: rgb(244, 244, 244);
-}
-
-.ViewMoreButton button {
-    border-radius: 50%;
-    height: 50px;
-    width: 50px;
-    padding: 0px !important;
-}
-
-.ViewMoreButton button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.ViewMoreButton button span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.ViewMoreButton button svg {
-    font-size: 20px;
-}
-
-.Animated360ServicesItem {
-    position: relative;
-}
-
-.Animated360ServicesItem:hover .ViewMoreButton button {
-    transform: rotate(-45deg);
-}
-
-.Animated360ServicesItem:hover .Animated360ServicesItemImage {
-    opacity: 1;
-    transition: .5s;
-}
-
-.Animated360ServicesItemImage {
-    width: 170px;
-    height: 200px;
-    position: absolute;
-    left: 50%;
-    opacity: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: .5s;
-}
-
-
-.Animated360ServicesItem:hover .Animated360ServicesItemImage img {
-    width: 100%;
-    height: 100%;
-    transition: .5s;
-    transform: rotate(0deg);
-}
-
-.Animated360ServicesItemImage img {
-    width: 0%;
-    height: 0%;
-    object-fit: cover;
-    transition: .5s;
-    transform: rotate(10deg);
-    border-radius: 20px;
-} */
-
-
-/* .Animated360ServicesItem{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    height: 100%;
-    background: #fff;
-    border-radius: 20px;
-    padding: 30px 20px;
-    transition: all 0.4s ease;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-} */
-
 .NewMarketingGrid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -232,7 +115,7 @@
 .NewServiceImage {
     position: relative;
     width: min(50vh, 100%);
-    height: clamp(280px, 50vh, 560px);
+    height: clamp(220px, 40vh, 420px);
     padding: 0;
     display: flex;
     align-items: center;
@@ -266,24 +149,24 @@
 }
 
 .NewServiceOverlayTitle {
-  position: absolute;
-    bottom: -12px;
-    left: 16px;
-    padding: 10px 12px;
-    transform: translateY(20px);
-    transition: transform 0.3s ease;
-    margin: 0;
-    font-size: 1rem;
-    font-weight: 700;
-    color: #f3c63f;
-    background: rgba(0,0,0,0.35);
-    border-radius: 10px;
+    position: absolute;
+        bottom: -12px;
+        left: 16px;
+        padding: 10px 12px;
+        transform: translateY(20px);
+        transition: transform 0.3s ease;
+        margin: 0;
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: #f3c63f;
+        background: rgba(0,0,0,0.35);
+        border-radius: 10px;
 }
 .NewServiceImage:hover .NewServiceOverlayTitle,
 .NewServiceImage:active .NewServiceOverlayTitle,
 .NewServiceCard:hover .NewServiceOverlayTitle {
     transform: translateY(-25px);
-    /* top: 4px; */
+    
 }
 .NewServiceCTA {
     position: absolute;
@@ -477,7 +360,7 @@
     margin: 10px 0 6px 0;
     font-weight: 800;
     color: #111;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 .AllServiceBody p {
     margin: 0;
@@ -494,6 +377,7 @@
     color: #b31616;
     text-decoration: none;
     font-weight: 600;
+    font-size: 19px;
 }
 .ReadMoreLink .Arrow {
     transition: transform .2s ease;
@@ -507,6 +391,20 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 16px;
     }
+    .NewServiceOverlayTitle {
+  position: absolute;
+    bottom: 28px;
+    /* left: 16px; */
+    padding: 10px 12px;
+    /* transform: translateY(20px); */
+    /* transition: transform 0.3s ease; */
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    background: rgba(0,0,0,0.35);
+    border-radius: 10px;
+}
 }
 @media (max-width: 576px) {
     .AllServicesGrid {
@@ -538,7 +436,7 @@
 
 .NewServiceTitle h4 {
     margin: 0;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 700;
     text-transform: capitalize;
     color: #111;
@@ -566,33 +464,78 @@
 
 @media (max-width: 991px) {
     .NewMarketingGrid {
-        grid-template-columns: repeat(2, 1fr);
+        display: flex;
+  flex-direction: column;
+        gap: 7px;
     }
     .NewServiceImage {
-        height: clamp(260px, 48vh, 520px);
+        height: clamp(200px, 38vh, 380px);
         width: 100%;
         border-radius: 14px;
     }
-    .NewServiceOverlayTitle {
-        bottom: -9px;
-        left: 14px;
-        font-size: 0.95rem;
-        padding: 8px 10px;
-    }
+
     .NewServiceCTA {
-        right: 10px;
-        bottom: 10px;
-        width: 38px;
-        height: 38px;
+        /* right: 10px; */
+        bottom: 32px;
+        /* width: 38px; */
+        /* height: 38px; */
+    }
+}
+
+/* Disable animations on mobile devices (under 992px) */
+@media (max-width: 991px) {
+    .NewServiceOverlayTitle {
+        transform: translateY(0) !important;
+        /* bottom: 12px !important; */
+        font-size:19px;
+        left: -1px;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transition: none !important;
+    }
+    
+    .NewServiceImage:hover .NewServiceOverlayTitle,
+    .NewServiceImage:active .NewServiceOverlayTitle,
+    .NewServiceCard:hover .NewServiceOverlayTitle {
+        transform: translateY(0) !important;
+        transition: none !important;
+    }
+    
+    .NewServiceCard {
+        transition: none !important;
+        height: 35vh;
+    }
+    
+    .NewServiceCard:hover {
+        transform: none !important;
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.10) !important;
+    }
+    
+    .NewServiceImage img {
+        transition: none !important;
+    }
+    
+    .NewServiceCTA {
+        transition: none !important;
+    }
+    
+    .NewServiceImage:hover .NewServiceCTA {
+        transform: none !important;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15) !important;
+    }
+    .NewServiceOverlayTitle{
+        /* background-color:none; */
+          background:none;
+
     }
 }
 
 @media (max-width: 768px) {
     .NewMarketingGrid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
     .NewServiceImage {
-        height: clamp(240px, 45vh, 480px);
+        /* height: clamp(240px, 45vh, 480px); */
         width: 100%;
         border-radius: 12px;
     }
@@ -607,10 +550,10 @@
     .ViewAllLink .ArrowIcon svg {
         font-size: 16px;
     }
-    .NewServiceCTA {
+    /* .NewServiceCTA {
         width: 36px;
         height: 36px;
-    }
+    } */
 }
 
 @media (min-width: 1200px) {
@@ -622,13 +565,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .NewServiceCard,
-    .NewServiceImage img,
-    .NewServiceOverlayTitle,
-    .NewServiceCTA,
-    .ViewAllLink {
-        transition: none;
-    }
+
 }
 .ServiceProCard {
     margin-top: 16px;
