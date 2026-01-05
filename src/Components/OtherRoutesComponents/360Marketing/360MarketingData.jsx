@@ -235,7 +235,7 @@ const Three60MarketingData = [
             </>
         ),
         image:
-            " https://imgs.search.brave.com/yTnHdM12qXkw7URyCZc4oCXmxi1DsaE5dZFlO1glrZI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cy4x/MjNyZi5jb20vNDUw/d20vemluZXRyb24v/emluZXRyb24yNDAz/L3ppbmV0cm9uMjQw/MzAyMjg4LzIyNjQw/NzAxOC1kZXNpZ24t/bGF5b3V0LWVsZW1l/bnRzLW1vYmlsZS1k/ZXNpZ24taW4tYWly/LWFyb3VuZC1oYW5n/aW5nLXBob25lLWRl/dmVsb3Blci1sYXB0/b3AtcHJvZ3JhbW1p/bmcuanBnP3Zlcj02",
+            "https://img.freepik.com/free-photo/representation-user-experience-interface-design_23-2150169863.jpg?ga=GA1.1.1160597451.1767374197&semt=ais_hybrid&w=740&q=80",
         subtitle: "Cross-platform and native mobile solutions",
         // technologies: ["Flutter", "React Native", "Kotlin", "Swift", "Xamarin", "Ionic", "Cordova", "Java"],
     },
