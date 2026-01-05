@@ -1,3 +1,4 @@
+
 // const Three60MarketingData = [
 //   {
 //     title: "Social Media Marketing",
@@ -493,7 +494,7 @@ const Three60MarketingData = [
             "https://img.freepik.com/free-photo/online-shopping-concept_23-2151896865.jpg?ga=GA1.1.1160597451.1767374197&semt=ais_hybrid&w=740&q=80",
     },
     {
-        title: "Branding & Design",
+        title:"Branding & Design",
         peregraph: "A brand is more than just a name—it's the visual identity of a business or brand. We create unique brand identities that resonate with your target audience, helping you build brand loyalty and drive customer engagement.",
         description: (
             <>
@@ -522,7 +523,7 @@ const Three60MarketingData = [
             "https://img.freepik.com/free-photo/online-shopping-concept_23-2151896865.jpg?ga=GA1.1.1160597451.1767374197&semt=ais_hybrid&w=740&q=80",
     },
     {
-        title: "Ecommerce Development",
+        title:"Ecommerce Development",
         peregraph: "E-commerce, or online shopping, has transformed the way businesses connect with customers. We develop robust, user-friendly e-commerce platforms that enable you to sell your products or services online, whether you're a small business owner or a large enterprise.",
         description: (
             <>
@@ -552,7 +553,7 @@ const Three60MarketingData = [
             "https://img.freepik.com/free-photo/online-shopping-concept_23-2151896865.jpg?ga=GA1.1.1160597451.1767374197&semt=ais_hybrid&w=740&q=80",
     },
     {
-        title: "Maintenance & Support",
+        title:" Maintenance & Support",
         peregraph: "Once your e-commerce platform is up and running, it's essential to maintain and support it to ensure optimal performance, security, and user satisfaction",
         description: (
             <>
@@ -582,6 +583,49 @@ const Three60MarketingData = [
         image:
             "https://img.freepik.com/free-photo/online-shopping-concept_23-2151896865.jpg?ga=GA1.1.1160597451.1767374197&semt=ais_hybrid&w=740&q=80",
     },
+    {
+        title:"Automated Outreach Services",
+        peregraph: "Digital marketing is essential for businesses to reach and engage their target audience online. We provide comprehensive digital marketing services that help businesses grow their online presence, drive traffic, and increase conversions.",
+        description: (
+            <>
+                <h4>Smart, Scalable & Personalized Customer Engagement</h4>
+                <p>At Agilux Solution, we provide Conversational Marketing & Automated Outreach Services that help businesses, brands, and individuals connect with their audience at scale through voice bot calls, SMS, WhatsApp messages, and automated conversations.</p>
+
+                <p>If you already have your audience data (mobile numbers, email IDs, or WhatsApp contacts), we help you turn it into high-impact marketing campaigns that drive awareness, engagement, and conversions — automatically.</p>
+                <h4>Our Automated Outreach Services allow you to</h4>
+                <ul>
+                    <li>Deliver your message instantly</li>
+                    <li>Engage thousands of contacts simultaneously</li>
+                    <li>Maintain consistency and accuracy</li>
+                    <li>Reduce manual effort and marketing costs</li>
+                </ul>
+                <h4>What We Do at Agilux Solution</h4>
+                <p>We help you promote products, services, brands, campaigns, or individuals using automated, permission-based outreach across multiple channels.</p>
+                <h4>Our outreach campaigns are ideal for</h4>
+                <ul>
+                    <li>Product launches</li>
+                    <li>Service promotions</li>
+                    <li>Brand awareness campaigns</li>
+                    <li>Event announcements</li>
+                    <li>Political or public awareness messaging</li>
+                    <li>Customer updates & reminders</li>
+                    <li>Lead nurturing & follow-ups</li>
+                </ul>
+                <h4>Channels We Use for Automated Outreach</h4>
+                <h4 style={{ marginTop: '24px' }}>📞 Voice Bot Calling Campaigns</h4>
+                <p>Pre-recorded or AI-driven voice calls delivered to your audience with clear, consistent messaging. Perfect for announcements, promotions, reminders, and large-scale outreach.</p>
+                <h4>💬 SMS Marketing Automation</h4>
+                <p>Fast, direct, and highly effective text message campaigns for promotions, offers, alerts, and updates.</p>
+                <h4>📲 WhatsApp Messaging Campaigns</h4>
+                <p>Engage your audience on one of the most trusted platforms using personalized WhatsApp messages, broadcasts, and automated responses.</p>
+                <h4>📧 Email Outreach Automation (Optional)</h4>
+                <p>For brands that want multi-channel reach, we integrate email messaging into the outreach flow.</p>
+
+            </>
+        ),
+        image:
+            "https://img.freepik.com/free-photo/online-shopping-concept_23-2151896865.jpg?ga=GA1.1.1160597451.1767374197&semt=ais_hybrid&w=740&q=80",
+    }
 
 
 

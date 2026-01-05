@@ -4,10 +4,14 @@ import Three60MarketingData from "../360Marketing/360MarketingData";
 // import NavigationData from "../../NavigationBar/NavigationData";
 import { useNavigate, useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { MdPhoneIphone, MdWeb, MdCampaign, MdShoppingCart, MdPeopleAlt, MdContentPaste, MdSettings, MdSupportAgent } from "react-icons/md";
+import { MdPhoneIphone, MdWeb, MdCampaign, MdPeopleAlt, MdContentPaste, MdSettings, MdMail, MdList } from "react-icons/md";
 import { BiSearch } from "react-icons/bi";
-import { FiPenTool } from "react-icons/fi";
-import { FaCrown } from "react-icons/fa6";
+import { FiShoppingCart } from "react-icons/fi";
+import { GrVmMaintenance } from "react-icons/gr";
+// import { FaCrown } from "react-icons/fa6";
+import { MdOutlineBrandingWatermark } from "react-icons/md";
+
+
 
 const ServicesSecound = () => {
     const navigate = useNavigate();
@@ -23,22 +27,50 @@ const ServicesSecound = () => {
     };
     const getIconInfo = (title) => {
         const key = createSlug(title);
-        if (key.includes("app-development")) return { icon: <MdPhoneIphone />, cls: "icon-app" };
-        if (key.includes("seo-services")) return { icon: <BiSearch />, cls: "icon-seo" };
-        if (key.includes("website-development")) return { icon: <MdWeb />, cls: "icon-web" };
-        if (key.includes("digital-marketing")) return { icon: <MdCampaign />, cls: "icon-marketing" };
-        if (key.includes("e-commerce-listing") || key.includes("ecommerce-development")) return { icon: <MdShoppingCart />, cls: "icon-ecomm" };
-        if (key.includes("crm-software-development")) return { icon: <MdPeopleAlt />, cls: "icon-crm" };
-        if (key.includes("cms-development")) return { icon: <MdContentPaste />, cls: "icon-cms" };
-        if (key.includes("erp-software-development")) return { icon: <MdSettings />, cls: "icon-erp" };
-        if (key.includes("logo-design")) return { icon: <FaCrown />, cls: "icon-logo" };
-        if (key.includes("branding-design")) return { icon: <FiPenTool />, cls: "icon-branding" };
-        if (key.includes("maintenance-support")) return { icon: <MdSupportAgent />, cls: "icon-support" };
+
+        if (key.includes("app-development"))
+            return { icon: <MdPhoneIphone />, cls: "icon-app" };
+
+        if (key.includes("seo"))
+            return { icon: <BiSearch />, cls: "icon-seo" };
+
+        if (key.includes("website-development"))
+            return { icon: <MdWeb />, cls: "icon-web" };
+
+        if (key.includes("digital-marketing"))
+            return { icon: <MdCampaign />, cls: "icon-marketing" };
+
+        if (key.includes("ecommerce"))
+            return { icon: <FiShoppingCart />, cls: "icon-ecomm" };
+
+        if (key.includes("listing"))
+            return { icon: <MdList />, cls: "icon-tool" };
+
+        if (key.includes("crm"))
+            return { icon: <MdPeopleAlt />, cls: "icon-crm" };
+
+        if (key.includes("cms"))
+            return { icon: <MdContentPaste />, cls: "icon-cms" };
+
+        if (key.includes("erp"))
+            return { icon: <MdSettings />, cls: "icon-erp" };
+
+        // ✅ FIXED
+        if (key.includes("branding"))
+            return { icon: <MdOutlineBrandingWatermark />, cls: "icon-branding" };
+
+        // ✅ FIXED
+        if (key.includes("maintenance") || key.includes("support"))
+            return { icon: <GrVmMaintenance />, cls: "icon-support" };
+
+        if (key.includes("outreach") || key.includes("email"))
+            return { icon: <MdMail />, cls: "icon-mail" };
+
         return { icon: <MdWeb />, cls: "icon-default" };
     };
     return (
         <div>
-           
+
             <div className="Container SectionTopPadding PaddingbottomMedium">
                 <div className="AllServicesGrid">
                     {Three60MarketingData.map((item, index) => (
