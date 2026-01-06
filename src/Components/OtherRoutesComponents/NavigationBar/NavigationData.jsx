@@ -38,6 +38,12 @@ const NavigationData = [
     },
     {
         id: 4,
+        name: "Blog",
+        link: "/blog",
+        SubMenu: []
+    },
+    {
+        id: 5,
         name: "Career",
         link: "/career",
         SubMenu: []

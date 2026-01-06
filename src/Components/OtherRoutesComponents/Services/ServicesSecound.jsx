@@ -10,6 +10,9 @@ import { FiShoppingCart } from "react-icons/fi";
 import { GrVmMaintenance } from "react-icons/gr";
 // import { FaCrown } from "react-icons/fa6";
 import { MdOutlineBrandingWatermark } from "react-icons/md";
+import { FaCrown } from "react-icons/fa";
+import "./ServicesSecound.css";
+
 
 
 
@@ -66,12 +69,40 @@ const ServicesSecound = () => {
         if (key.includes("outreach") || key.includes("email"))
             return { icon: <MdMail />, cls: "icon-mail" };
 
+        if (key.includes("Design") || key.includes("logo"))
+            return { icon: <FaCrown />, cls: "icon-logo" };
+
         return { icon: <MdWeb />, cls: "icon-default" };
     };
     return (
         <div>
 
             <div className="Container SectionTopPadding PaddingbottomMedium">
+                <div className="ServicesContainersection" data-aos="fade-up">
+                    <div className="ServicesIntroContent">
+                        <h2 className="ServicesMainTitle" style={{letterSpacing:'0.5px'}}>Comprehensive <span style={{color:"#EAB236"}}>Digital Solutions</span> for Your Business</h2>
+                        <p className="ServicesDescription">
+                            At <strong>Agilux Solutions</strong>, we deliver strategic, results-driven digital services designed to transform your business and drive sustainable growth.
+                        </p>
+                        {/* <div className="ServicesHighlights">
+                            <div className="HighlightItem">
+                                <h4>✓ Strategic Planning</h4>
+                                <p>Customized approaches aligned with your business objectives</p>
+                            </div>
+                            <div className="HighlightItem">
+                                <h4>✓ Expert Execution</h4>
+                                <p>Professional implementation with precision and attention to detail</p>
+                            </div>
+                            <div className="HighlightItem">
+                                <h4>✓ Proven Results</h4>
+                                <p>Maximum ROI and customer satisfaction across all service verticals</p>
+                            </div>
+                        </div> */}
+                        <p className="ServicesClosing">
+                            Whether you're a startup looking to establish your digital presence, a growing business needing scalable solutions, or an established enterprise requiring specialized support – <Link to="/career" className="AgiluxCareerLink"><strong>Agilux Solutions</strong></Link> is your trusted partner for success. We combine innovation, technology, and customer-centric approach to deliver services that drive real business impact.
+                        </p>
+                    </div>
+                </div>
                 <div className="AllServicesGrid">
                     {Three60MarketingData.map((item, index) => (
                         <div className="AllServiceCard" key={index}>

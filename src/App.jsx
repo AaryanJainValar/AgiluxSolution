@@ -13,6 +13,7 @@ import ServicesSecound from './Components/OtherRoutesComponents/Services/Service
 import WhatsAppButton from './Components/OtherRoutesComponents/WhatsAppButton/WhatsAppButton'
 import Career from './Components/OtherRoutesComponents/Career/Career'
 import PageTitleUpdater from './Components/OtherRoutesComponents/PageTitleUpdater/PageTitleUpdater'
+import Blog from './Components/OtherRoutesComponents/AgiluxBlog/AgiluxBlog'
 
 function App() {
   // Initialize AOS when component mounts
@@ -52,6 +53,7 @@ function App() {
         <Route path="/services/:serviceName" element={<PerticularService />} />
         <Route path="/servicesitems" element={<ServicesSecound />} />
         <Route path="/servicesitems/:serviceName" element={<PerticularService />} />
+       <Route path="/blog" element={<Blog />} />
         <Route path="/all-clients" element={<AllClients />} />
         <Route path="/career" element={<Career />} />
       </Routes>

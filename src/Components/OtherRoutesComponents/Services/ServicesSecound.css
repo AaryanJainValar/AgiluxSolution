@@ -1,0 +1,189 @@
+.ServicesContainersection {
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+}
+
+/* ============================================
+   SERVICES INTRO CONTENT
+   ============================================ */
+
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ServicesMainTitle {
+    font-size: 32px;
+    font-weight: 700;
+    color: #2d2d2d;
+    margin: 0 0 20px 0;
+    line-height: 1.3;
+    /* background: linear-gradient(135deg, #2d2d2d 0%, #3498db 100%); */
+    -webkit-background-clip: text;
+    color: black;
+    /* -webkit-text-fill-color: transparent; */
+    background-clip: text;
+}
+
+.ServicesDescription {
+    font-size: 17px;
+    color: #555;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    line-height: 1.8;
+    /* margin: 0 0 30px 0; */
+    text-align: justify;
+}
+
+.ServicesDescription strong {
+    color: #EAB236;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+/* ============================================
+   HIGHLIGHTS SECTION
+   ============================================ */
+
+.ServicesHighlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin: 35px 0;
+    padding: 30px 0;
+    border-top: 2px solid #e0e0e0;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.HighlightItem {
+    background: white;
+    padding: 25px 20px;
+    border-radius: 10px;
+    border-left: 4px solid #3498db;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.HighlightItem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(52, 152, 219, 0.15);
+    border-left-color: #2ecc71;
+}
+
+.HighlightItem h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #2d2d2d;
+    margin: 0 0 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.HighlightItem p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.HighlightItem:hover h4 {
+    color: #EAB236;
+}
+
+/* ============================================
+   CLOSING SECTION
+   ============================================ */
+
+.ServicesClosing {
+    font-size: 16px;
+    color: #555;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    line-height: 1.8;
+    margin: 0;
+    text-align: justify;
+}
+
+.ServicesClosing strong {
+    color: #EAB236;
+    font-weight: 700;
+}
+
+/* ============================================
+   AGILUX CAREER LINK
+   ============================================ */
+
+.AgiluxCareerLink {
+    position: relative;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.AgiluxCareerLink:hover {
+    color: #2980b9;
+}
+
+.AgiluxCareerLink:hover::after {
+    width: 100%;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 900px) {
+    .ServicesContainersection {
+        margin-top: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .ServicesMainTitle {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+
+    .ServicesDescription {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+
+    .ServicesHighlights {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin: 20px 0;
+        padding: 15px 0;
+    }
+
+    .HighlightItem {
+        padding: 15px 12px;
+        border-radius: 8px;
+    }
+
+    .HighlightItem h4 {
+        font-size: 16px;
+        margin-bottom: 6px;
+        gap: 8px;
+    }
+
+    .HighlightItem p {
+        font-size: 12px;
+    }
+
+    .ServicesClosing {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+}
